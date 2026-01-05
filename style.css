@@ -1,0 +1,69 @@
+/* style.css */
+/* 1. RESET: Removes default spacing browsers add */
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+/* 2. DARK MODE BASE: This forces the dark theme */
+body {
+ background-color: #1a1a1a; /* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
+ color: #f0f0f0; /* Off-white text for contrast */
+ font-family: Arial,Helvetica,sans-serif; /* a bit long-boxed shape,I want to make it look "techy" */
+ line-height: 1.6;
+ padding-bottom: 80px;
+}
+h1 { color:green;}
+/* 3. NAVIGATION BAR */
+nav {
+ background-color: #333;
+ padding: 15px;
+ text-align: center;
+ border-bottom: 3px solid #00d4ff; /* A splash of 'tech' blue */
+}
+nav a {
+ color: #fff;
+ text-decoration: none;
+ margin: 0 15px;
+ font-size: 1.1em;
+ font-weight: bold;
+}
+nav a:hover {
+ color: #00d4ff; /* Changes color when you hover */
+}
+/* 4. LAYOUT CONTAINERS */
+.container {
+ max-width: 800px; /* Keeps text readable like a book */
+ margin: 0 auto;
+ padding: 20px;
+}
+/* 5. MEDIA (IMAGES & VIDEO) */
+/* This ensures images/videos never overflow the screen */
+.mimi, video, iframe {
+ max-width: 100%;
+ height: auto;
+ display: block;
+ margin: 20px auto;
+ border: 1px solid #555;
+ border-radius: 5px;
+}
+/* 6. FORMS (For Feedback & Signup) */
+input, textarea {
+ width: 100%;
+ padding: 10px;
+ margin: 10px 0;
+ background-color: #2a2a2a;
+ border: 1px solid #555;
+ color: #fff;
+}
+button {
+ background-color: #00d4ff;
+ color: #000;
+ padding: 10px 20px;
+ border: none;
+ cursor: pointer;
+ font-weight: bold;
+}
+button:hover {
+ background-color: #fff;
+}
