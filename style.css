@@ -9,22 +9,23 @@
 @media (max-width: 600px) {
  body { padding: 20px  /*smaller spacing*/
   /*keep background and text color consistent*/
-  }
-/* DARK MODE BASE: This forces the dark theme */
-body {
- font-size: 18px;
- font-family: Arial,Helvetica,sans-serif; /* a bit long-boxed shape,I want to make it look "techy" */
- line-height: 1.6;
- padding-bottom: 20px;}
- background-color: #1a1a1a;/* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
+  background-color: #1a1a1a;/* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
  color: #f0f0f0; }  /* Off-white text for contrast */
 }
-
+/* DARK MODE BASE: This forces the dark theme */
+body {
+background-color: #1a1a1a;
+ color: #f0f0f0;   /* Off-white text for contrast */
+ font-size: 20px;
+ font-family: Arial,Helvetica,sans-serif; /* a bit long-boxed shape,I want to make it look "techy" */
+ line-height: 1.7;
+ padding-bottom: 20px;
+}
 h1 { color:green;}
 /* 3. NAVIGATION BAR */
 nav {
  background-color: #333;
- padding: 15px;
+ padding: 18px;
  text-align: center;
  border-bottom: 3px solid #00d4ff; /* A splash of 'tech' blue */
 }
@@ -75,6 +76,7 @@ button:hover {
  background-color: #fff;
 
 }
+
 
 
 
