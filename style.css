@@ -9,14 +9,15 @@
 @media (max-width: 600px) {
  body { padding: 20px  /*smaller spacing*/
   /*keep background and text color consistent*/
-  background-color: #1a1a1a;/* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
-  color: #f0f0f0; }  /* Off-white text for contrast */
-}
+  }
 /* DARK MODE BASE: This forces the dark theme */
 body {
+ font-size: 18px;
  font-family: Arial,Helvetica,sans-serif; /* a bit long-boxed shape,I want to make it look "techy" */
  line-height: 1.6;
  padding-bottom: 20px;}
+ background-color: #1a1a1a;/* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
+ color: #f0f0f0; }  /* Off-white text for contrast */
 }
 
 h1 { color:green;}
@@ -42,13 +43,7 @@ nav a:hover {
  max-width:100%; /* let it fill the screen */
  padding: 10px;
 }
-p, h1, h2, h3 {
- font-size: 1em; /*base size , "em" used since it is flexible not like px*/
-}
-@media (max-width: 600px) {
- p, h1, h2, h3 {
- font-size: 0.9em; /*slightly smaller for phones*/}
-}
+
 /* 5. MEDIA (IMAGES & VIDEO) */
 /* This ensures images/videos never overflow the screen */
 .mimi, video, iframe {
@@ -80,6 +75,7 @@ button:hover {
  background-color: #fff;
 
 }
+
 
 
 
