@@ -9,13 +9,11 @@
 @media (max-width: 600px) {
  body { padding: 20px  /*smaller spacing*/
   /*keep background and text color consistent*/
-  background-color: #1a1a1a;
- color: #f0f0f0; }
+  background-color: #1a1a1a;/* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
+  color: #f0f0f0; }  /* Off-white text for contrast */
 }
 /* DARK MODE BASE: This forces the dark theme */
 body {
- background-color: #1a1a1a; /* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
- color: #f0f0f0; /* Off-white text for contrast */
  font-family: Arial,Helvetica,sans-serif; /* a bit long-boxed shape,I want to make it look "techy" */
  line-height: 1.6;
  padding-bottom: 20px;}
@@ -42,8 +40,14 @@ nav a:hover {
 /* 4. LAYOUT CONTAINERS FOR MY DIV TAG */
 .container {
  max-width:100%; /* let it fill the screen */
- margin: 0 auto;
  padding: 10px;
+}
+p, h1, h2, h3 {
+ font-size: 1em; /*base size , "em" used since it is flexible not like px*/
+}
+@media (max-width: 600px) {
+ p, h1, h2, h3 {
+ font-size: 0.9em; /*slightly smaller for phones*/}
 }
 /* 5. MEDIA (IMAGES & VIDEO) */
 /* This ensures images/videos never overflow the screen */
@@ -76,5 +80,6 @@ button:hover {
  background-color: #fff;
 
 }
+
 
 
