@@ -5,7 +5,6 @@
  margin: 0;
  padding: 0;
 }
-@media (max-width: 600px) {
 /* DARK MODE BASE: This forces the dark theme */
 body {
  background-color: #1a1a1a; /* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
@@ -13,6 +12,13 @@ body {
  font-family: Arial,Helvetica,sans-serif; /* a bit long-boxed shape,I want to make it look "techy" */
  line-height: 1.6;
  padding-bottom: 20px;}
+}
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 600px) {
+ body { padding: 20px  /*smaller spacing*/
+  /*keep background and text color consistent*/
+  background-color: #1a1a1a;
+ color: #f0f0f0; }
 }
 h1 { color:green;}
 /* 3. NAVIGATION BAR */
@@ -69,3 +75,4 @@ button:hover {
  background-color: #fff;
 
 }
+
