@@ -17,7 +17,7 @@ body {
 background-color: #1a1a1a;
  color: #f0f0f0;   /* Off-white text for contrast */
  font-size: 22px;
- font-family: Arial,Helvetica,sans-serif; /* a bit long-boxed shape,I want to make it look "techy" */
+ font-family: Consolas, monospace; /* a bit long-boxed shape,I want to make it look "techy" */
  line-height: 1.7;
  padding-bottom: 20px;
 }
@@ -76,6 +76,7 @@ button:hover {
  background-color: #fff;
 
 }
+
 
 
 
