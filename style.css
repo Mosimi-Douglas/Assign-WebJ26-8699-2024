@@ -5,13 +5,14 @@
  margin: 0;
  padding: 0;
 }
-/* 2. DARK MODE BASE: This forces the dark theme */
+@media (max-width: 600px) {
+/* DARK MODE BASE: This forces the dark theme */
 body {
  background-color: #1a1a1a; /* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
  color: #f0f0f0; /* Off-white text for contrast */
  font-family: Arial,Helvetica,sans-serif; /* a bit long-boxed shape,I want to make it look "techy" */
  line-height: 1.6;
- padding-bottom: 80px;
+ padding-bottom: 20px;}
 }
 h1 { color:green;}
 /* 3. NAVIGATION BAR */
@@ -31,7 +32,7 @@ nav a {
 nav a:hover {
  color: #00d4ff; /* Changes color when you hover */
 }
-/* 4. LAYOUT CONTAINERS */
+/* 4. LAYOUT CONTAINERS FOR MY DIV TAG */
 .container {
  max-width: 800px; /* Keeps text readable like a book */
  margin: 0 auto;
@@ -66,4 +67,5 @@ button {
 }
 button:hover {
  background-color: #fff;
+
 }
