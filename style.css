@@ -5,6 +5,13 @@
  margin: 0;
  padding: 0;
 }
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 600px) {
+ body { padding: 20px  /*smaller spacing*/
+  /*keep background and text color consistent*/
+  background-color: #1a1a1a;
+ color: #f0f0f0; }
+}
 /* DARK MODE BASE: This forces the dark theme */
 body {
  background-color: #1a1a1a; /* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
@@ -13,13 +20,7 @@ body {
  line-height: 1.6;
  padding-bottom: 20px;}
 }
-/* MOBILE ADJUSTMENTS */
-@media (max-width: 600px) {
- body { padding: 20px  /*smaller spacing*/
-  /*keep background and text color consistent*/
-  background-color: #1a1a1a;
- color: #f0f0f0; }
-}
+
 h1 { color:green;}
 /* 3. NAVIGATION BAR */
 nav {
@@ -40,9 +41,9 @@ nav a:hover {
 }
 /* 4. LAYOUT CONTAINERS FOR MY DIV TAG */
 .container {
- max-width: 800px; /* Keeps text readable like a book */
+ max-width:100%; /* let it fill the screen */
  margin: 0 auto;
- padding: 20px;
+ padding: 10px;
 }
 /* 5. MEDIA (IMAGES & VIDEO) */
 /* This ensures images/videos never overflow the screen */
@@ -75,4 +76,5 @@ button:hover {
  background-color: #fff;
 
 }
+
 
