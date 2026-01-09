@@ -1,4 +1,4 @@
-/* 1. DESIGN TOKENS & RESET */
+* 1. DESIGN TOKENS */
 :root {
     --deep-black: #0a0a0a;
     --dark-grey: #1a1a1a;
@@ -19,12 +19,12 @@
 body {
     background-color: var(--deep-black);
     color: var(--soft-white);
-    font-family: Consolas, "Courier New", monospace; /* Consistent techy feel */
+    font-family: Consolas, "Courier New", monospace;
     line-height: 1.7;
     overflow-x: hidden;
 }
 
-/* 2. UNIVERSAL NAVIGATION (Hamburger System) */
+/* 2. NAVIGATION */
 nav {
     background-color: var(--nav-grey);
     padding: 15px 20px;
@@ -56,14 +56,13 @@ nav a {
     margin: 0 15px;
     font-size: 1rem;
     font-weight: bold;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 nav a:hover, nav a.active {
     color: var(--tech-blue);
 }
 
-/* Hamburger UI */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -84,7 +83,7 @@ nav a:hover, nav a.active {
     display: none;
 }
 
-/* 3. LAYOUT & CONTAINERS */
+/* 3. LAYOUT */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -101,12 +100,7 @@ hr {
     margin: 30px 0;
 }
 
-/* 4. TYPOGRAPHY & ELEMENTS */
-h1, h2, h3 {
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
+/* 4. ELEMENTS */
 .highlight-blue { color: var(--tech-blue); }
 .highlight-red { color: var(--vibrant-red); }
 .highlight-green { color: var(--success-green); }
@@ -119,13 +113,7 @@ button {
     cursor: pointer;
     font-weight: bold;
     font-family: inherit;
-    transition: 0.3s;
     border-radius: 4px;
-}
-
-button:hover {
-    background-color: var(--soft-white);
-    transform: scale(1.05);
 }
 
 button a {
@@ -133,44 +121,30 @@ button a {
     color: inherit;
 }
 
-/* 5. MEDIA ASSETS */
-img, video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 25px auto;
+.card {
+    background: var(--dark-grey);
+    padding: 25px;
+    border-radius: 10px;
     border: 1px solid var(--border-grey);
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
 }
 
-/* 6. SHARED PAGE COMPONENTS */
-
-/* About/Subjects Grid */
 .subjects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
-.card {
-    background: var(--dark-grey);
-    padding: 25px;
-    border-radius: 10px;
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border-radius: 8px;
     border: 1px solid var(--border-grey);
-    transition: 0.3s;
 }
 
-.card:hover {
-    border-color: var(--tech-blue);
-    transform: translateY(-5px);
-}
-
-/* Form Styles (Contact Page) */
-.form-group {
-    margin-bottom: 20px;
-}
-
+/* Form Styles */
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -179,20 +153,12 @@ input, textarea {
     color: white;
     font-family: inherit;
     border-radius: 4px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--tech-blue);
-}
-
-/* 7. RESPONSIVE DESIGN */
+/* 5. RESPONSIVE */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
+    .menu-toggle { display: flex; }
     .nav-links {
         position: absolute;
         top: 100%;
@@ -203,9 +169,8 @@ input:focus, textarea:focus {
         align-items: center;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease;
+        transition: max-height 0.3s ease;
     }
-
     .nav-links a {
         padding: 20px 0;
         width: 100%;
@@ -213,12 +178,7 @@ input:focus, textarea:focus {
         margin: 0;
         border-top: 1px solid var(--border-grey);
     }
-
-    #nav-check:checked ~ .nav-links {
-        max-height: 500px;
-    }
-
-    /* Hamburger to X animation */
+    #nav-check:checked ~ .nav-links { max-height: 500px; }
     #nav-check:checked ~ .menu-toggle span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     #nav-check:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
     #nav-check:checked ~ .menu-toggle span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
