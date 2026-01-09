@@ -1,85 +1,225 @@
-/* style.css */
-/* 1. RESET: Removes default spacing browsers add */
+/* 1. DESIGN TOKENS & RESET */
+:root {
+    --deep-black: #0a0a0a;
+    --dark-grey: #1a1a1a;
+    --nav-grey: #222;
+    --tech-blue: #00d4ff;
+    --vibrant-red: #ff4d4d;
+    --soft-white: #f0f0f0;
+    --border-grey: #333;
+    --success-green: #4CAF50;
+}
+
 * {
- box-sizing: border-box;
- margin: 0;
- padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-/* MOBILE ADJUSTMENTS */
-@media (max-width: 600px) {
- body { padding: 20px  /*smaller spacing*/
-  /*keep background and text color consistent*/
-  background-color: #1a1a1a;/* Could not find its name and i used color code instead : Very dark grey, easier on eyes than pure black */
- color: #f0f0f0; }  /* Off-white text for contrast */
-}
-/* DARK MODE BASE: This forces the dark theme */
+
 body {
-background-color: #1a1a1a;
- color: #f0f0f0;   /* Off-white text for contrast */
- font-size: 22px;
- font-family: Consolas, monospace; /* a bit long-boxed shape,I want to make it look "techy" */
- line-height: 1.7;
- padding-bottom: 20px;
+    background-color: var(--deep-black);
+    color: var(--soft-white);
+    font-family: Consolas, "Courier New", monospace; /* Consistent techy feel */
+    line-height: 1.7;
+    overflow-x: hidden;
 }
-h1 { color:green;}
-/* 3. NAVIGATION BAR */
+
+/* 2. UNIVERSAL NAVIGATION (Hamburger System) */
 nav {
- background-color: #333;
- padding: 18px;
- text-align: center;
- border-bottom: 3px solid #00d4ff; /* A splash of 'tech' blue */
+    background-color: var(--nav-grey);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--tech-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
+.nav-logo {
+    font-weight: bold;
+    color: var(--vibrant-red);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+}
+
 nav a {
- color: #fff;
- text-decoration: none;
- margin: 0 15px;
- font-size: 1.1em;
- font-weight: bold;
+    color: var(--soft-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
-nav a:hover {
- color: #00d4ff; /* Changes color when you hover */
+
+nav a:hover, nav a.active {
+    color: var(--tech-blue);
 }
-/* 4. LAYOUT CONTAINERS FOR MY DIV TAG */
+
+/* Hamburger UI */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--soft-white);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+#nav-check {
+    display: none;
+}
+
+/* 3. LAYOUT & CONTAINERS */
 .container {
- max-width:100%; /* let it fill the screen */
- padding: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-/* 5. MEDIA (IMAGES & VIDEO) */
-/* This ensures images/videos never overflow the screen */
-.mimi, video, iframe {
- max-width: 100%;
- height: auto;
- display: block;
- margin: 20px auto;
- border: 1px solid #555;
- border-radius: 5px;
+section {
+    margin-bottom: 60px;
 }
-/* 6. FORMS (For Feedback & Signup) */
-input, textarea {
- width: 100%;
- padding: 10px;
- margin: 10px 0;
- background-color: #2a2a2a;
- border: 1px solid #555;
- color: #fff;
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-grey);
+    margin: 30px 0;
 }
+
+/* 4. TYPOGRAPHY & ELEMENTS */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.highlight-blue { color: var(--tech-blue); }
+.highlight-red { color: var(--vibrant-red); }
+.highlight-green { color: var(--success-green); }
+
 button {
- background-color: #00d4ff;
- color: #000;
- padding: 10px 20px;
- border: none;
- cursor: pointer;
- font-weight: bold;
+    background-color: var(--tech-blue);
+    color: #000;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+    transition: 0.3s;
+    border-radius: 4px;
 }
+
 button:hover {
- background-color: #fff;
-
+    background-color: var(--soft-white);
+    transform: scale(1.05);
 }
 
+button a {
+    text-decoration: none;
+    color: inherit;
+}
 
+/* 5. MEDIA ASSETS */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border: 1px solid var(--border-grey);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
 
+/* 6. SHARED PAGE COMPONENTS */
 
+/* About/Subjects Grid */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
 
+.card {
+    background: var(--dark-grey);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--border-grey);
+    transition: 0.3s;
+}
 
+.card:hover {
+    border-color: var(--tech-blue);
+    transform: translateY(-5px);
+}
 
+/* Form Styles (Contact Page) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--dark-grey);
+    border: 1px solid var(--border-grey);
+    color: white;
+    font-family: inherit;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--tech-blue);
+}
+
+/* 7. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-grey);
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .nav-links a {
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        border-top: 1px solid var(--border-grey);
+    }
+
+    #nav-check:checked ~ .nav-links {
+        max-height: 500px;
+    }
+
+    /* Hamburger to X animation */
+    #nav-check:checked ~ .menu-toggle span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    #nav-check:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
+    #nav-check:checked ~ .menu-toggle span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
