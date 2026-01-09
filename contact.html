@@ -1,44 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewreport" content="width=device-width, initia-scale=1.0">
- <title>The Digital Loom | Connect</title>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digital Loom | Contact</title>
+    <!-- Linking to the external Global Styles from Canvas -->
+    <link rel="stylesheet" href="global.css">
 </head>
 <body>
- <nav>  <b style="color:red;">MENU   </b> 
- <a href="index.html">Home</a>
- <a href="#Explanation">Concept</a>
- <a href="contact.html">Join Us</a>
- </nav>
- <div class="container">
- <h2>Join the Collective</h2>
- <p>Curious about the next pattern? Sign up for updates or tell us what you think.</p>
- <div style="background: #222; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
- <h3>1. Get Latest Updates</h3>
- <form id="signupForm">
- <label>Email Address:</label>
- <input type="email" id="emailInput" placeholder="geometry@example.com" required>
- <button type="submit">Subscribe</button>
- </form>
- </div>
- <div>
- <h3>2. User Feedback</h3>
- <p>How did the geometry,art and concept of this site make you feel?</p>
- <form id="feedbackForm">
- <label>Your Name:</label>
- <input type="text" id="nameInput" required>
- 
- <label>Message:</label>
- <textarea id="messageInput" rows="5" required></textarea>
- 
- <button type="submit">Send Feedback</button>
- </form>
- </div>
- 
- <img src="https://images.unsplash.com/photo-1515630278258-407f66498911?w=800&q=80" alt="Neon technology patterns">
- </div>
- <script src="script.js"></script>
-</body>
 
+    <nav>
+        <a href="index.html" class="nav-logo">MOSIMI NEXUS</a>
+        
+        <input type="checkbox" id="nav-check">
+        <label for="nav-check" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="index.html#Explanation">Concept</a>
+            <a href="contact.html" class="active">Join Us</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1 align="center" class="highlight-blue">Join the Collective</h1>
+            <p align="center">Enter the nexus. Share your thoughts or sign up for our digital weave.</p>
+        </header>
+
+        <hr>
+
+        <section>
+            <div class="card">
+                <h3 class="highlight-red">1. Newsletter Subscription</h3>
+                <p>Stay updated on new subjects as they launch.</p>
+                <form id="signupForm" class="form-group">
+                    <label for="emailInput">Email Address:</label>
+                    <input type="email" id="emailInput" placeholder="geometry@nexus.com" required>
+                    <br><br>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h3 class="highlight-green">2. Feedback & Inquiry</h3>
+                <p>How did the geometry, art, and concept of this site make you feel?</p>
+                <form id="feedbackForm" class="form-group">
+                    <label for="nameInput">Your Name:</label>
+                    <input type="text" id="nameInput" placeholder="Craftsman Name" required>
+                    
+                    <label for="messageInput">Your Message:</label>
+                    <textarea id="messageInput" rows="5" placeholder="Tell us your thoughts..." required></textarea>
+                    
+                    <button type="submit">Send Feedback</button>
+                </form>
+            </div>
+        </section>
+
+        <img src="https://images.unsplash.com/photo-1515630278258-407f66498911?w=800&q=80" alt="Neon technology patterns">
+    </div>
+
+    <footer>
+        <p align="center" style="padding: 40px; color: #555; font-size: 0.8rem;">
+            &copy; 2023 Mosimi's Digital Nexus. The patterns are forming.
+        </p>
+    </footer>
+
+    <!-- Linking to the external Script file -->
+    <script src="script.js"></script>
+</body>
 </html>
