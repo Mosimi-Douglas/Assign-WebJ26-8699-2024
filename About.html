@@ -1,110 +1,79 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Mosimi's Digital Nexus</title>
-<!-- Linking to the external Global Styles from Canvas -->
-<link rel="style.css" href="global.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Mosimi's Digital Nexus</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-<a href="index.html" class="nav-logo">MOSIMI NEXUS</a>
+    <nav>
+        <a href="index.html" class="nav-logo">MOSIMI NEXUS</a>
+        
+        <input type="checkbox" id="nav-check">
+        <label for="nav-check" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-<input type="checkbox" id="nav-check">
-<label for="nav-check" class="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-</label>
-
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
-    <a href="index.html#Explanation">Concept</a>
-    <a href="contact.html">Join Us</a>
-</div>
-
-
-</nav>
-
-<header style="text-align: center; padding: 60px 20px; background: rgba(255, 255, 255, 0.02);">
-<h1 style="font-size: 2.5rem; letter-spacing: 5px;">MOSIMI'S <span class="highlight-blue">DIGITAL NEXUS</span></h1>
-<p class="highlight-red" style="font-weight: bold;">Where Human Creativity Meets Algorithm</p>
-</header>
-
-<div class="container">
-<section class="card" style="border-left: 5px solid var(--vibrant-red);">
-<h2>Who We Are</h2>
-<p>
-Welcome to <strong>Mosimi's Digital Nexus</strong>. We are an educative platform that believes the boundaries between science, art, and technology are an illusion. We use the metaphor of the "Digital Loom" to show how code, craft, and geometry weave the fabric of our modern world.
-</p>
-
-
-
-
-
-<p>
-Our mission is to provide interdisciplinary education that inspires the next generation of digital craftsmen. We don't just teach subjects; we teach the <strong>threads</strong> that connect them.
-</p>
-</section>
-
-<section>
-    <h2 style="text-align: center; margin-bottom: 40px;">Our Educational Pillars</h2>
-    <div class="subjects-grid">
-        <!-- Subject 1: Active -->
-        <div class="card" style="border-color: var(--vibrant-red);">
-            <h4 class="highlight-blue">1. Geometry_Tech_Art-Craft</h4>
-            <p>The study of how mathematical shapes and code materialize into physical beauty and tangible craft.</p>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="index.html#Explanation">Concept</a>
+            <a href="contact.html">Join Us</a>
         </div>
+    </nav>
 
-        <!-- Subject 2 -->
-        <div class="card">
-            <h4 class="highlight-blue">2. Bio-Digital Architecture</h4>
-            <p>Learning how nature's biological designs (like tree roots) can inspire better software and structural buildings.</p>
-        </div>
+    <header style="text-align: center; padding: 60px 20px;">
+        <h1 style="font-size: 2.5rem; letter-spacing: 5px;">MOSIMI'S <span class="highlight-blue">DIGITAL NEXUS</span></h1>
+        <p class="highlight-red" style="font-weight: bold;">Where Human Creativity Meets Algorithm</p>
+    </header>
 
-        <!-- Subject 3 -->
-        <div class="card">
-            <h4 class="highlight-blue">3. Kinetic Typography</h4>
-            <p>The art of making language move. Exploring the intersection of linguistics, timing, and motion graphics.</p>
-        </div>
+    <div class="container">
+        <section class="card" style="border-left: 5px solid var(--vibrant-red);">
+            <h2>Who We Are</h2>
+            <p>
+                Welcome to <strong>Mosimi's Digital Nexus</strong>. We use the metaphor of the "Digital Loom" to show how code, craft, and geometry weave the fabric of our modern world.
+            </p>
+        </section>
 
-        <!-- Subject 4 -->
-        <div class="card">
-            <h4 class="highlight-blue">4. Algorithmic Ethics</h4>
-            <p>Understanding the "Ghost in the Machine." A deep dive into the philosophy, bias, and society of AI.</p>
-        </div>
-
-        <!-- Subject 5 -->
-        <div class="card">
-            <h4 class="highlight-blue">5. Cyber-Pottery</h4>
-            <p>Using VR and haptic feedback to practice ancient crafts in a digital vacuum. Coding the "feel" of clay.</p>
-        </div>
+        <section>
+            <h2 style="text-align: center; margin-bottom: 40px;">Our Educational Pillars</h2>
+            <div class="subjects-grid">
+                <div class="card" style="border-color: var(--vibrant-red);">
+                    <h4 class="highlight-blue">1. Geometry_Tech_Art-Craft</h4>
+                    <p>Mathematical shapes materialize into physical beauty.</p>
+                </div>
+                <div class="card">
+                    <h4 class="highlight-blue">2. Bio-Digital Architecture</h4>
+                    <p>Nature's designs inspiring software and buildings.</p>
+                </div>
+                <div class="card">
+                    <h4 class="highlight-blue">3. Kinetic Typography</h4>
+                    <p>The art of making language move.</p>
+                </div>
+                <div class="card">
+                    <h4 class="highlight-blue">4. Algorithmic Ethics</h4>
+                    <p>A deep dive into the philosophy of AI.</p>
+                </div>
+                <div class="card">
+                    <h4 class="highlight-blue">5. Cyber-Pottery</h4>
+                    <p>Coding the "feel" of clay.</p>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
 
-<div style="text-align: center; margin-top: 50px;">
-    <p>Ready to weave your own digital thread?</p>
-    <br>
-    <button><a href="contact.html">Start Your Journey with Mosimi</a></button>
-</div>
+    <footer>
+        <p align="center" style="padding: 40px; color: #555; font-size: 0.8rem;">
+            &copy; 2023 Mosimi's Digital Nexus.
+        </p>
+    </footer>
 
-
-</div>
-
-<footer>
-<p align="center" style="padding: 40px; color: #555; font-size: 0.8rem;">
-&copy; 2023 Mosimi's Digital Nexus. The patterns are forming.
-</p>
-</footer>
-
-<!-- Link to the JavaScript in Canvas for menu functionality -->
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
 
