@@ -1,95 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewreport" content="width=device-width, initia-scale=1.0">
- <title>The Digital Loom | Home</title>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digital Loom | Home</title>
+    <!-- Linking to the external Global Styles from Canvas -->
+    <link rel="stylesheet" href="global.css">
 </head>
 <body>
- <nav> <b style="color:red;">MENU   </b> 
- <a href="index.html">Home</a>
- <a href="#Explanation"> Concept </a>
- <a href="contact.html">Join Us</a>
- </nav>
- <div class="container">
- <header>
- <h1 align="center"><b>GEOMETRIC_TECH_ART-CRAFT<b></h1>
- <h3>Where Code Weaves the Universe</h3>
- </header>
- <hr>
- <section>
- <h2>Is Coding the New Pottery,Art even?</h2>
- <p>
- Welcome  where we explore the hidden threads connecting the clay in a potter's hand to the pixels on your screen. 
- Did you know that the same <strong>Geometry</strong> that defines a honeycomb and Art are used to render 3D video games?  <br> 
- <button>  <a href="contact.html">Sign UP?</a> </button>
- </p>
- 
- <img class="mimi" src="generative_art.jpg" alt="Generative art">
-<TT> <I>The image shows how human element of craft (the hand)and art meeting Digital creation through Technology and Geometry</I></TT>
- <p>
- We look at <strong>Technology</strong> not just as a tool, but as a modern <strong>Craft</strong>. 
- </p>
- </section>
- <section>
- <h3>Featured Insight: Fractals</h3>
- <p>A look at how infinite patterns exist in nature and code.</p>
- 
- <video controls poster="https://via.placeholder.com/800x450.png?text=Fractal+Video+Poster">
- <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
- Your browser does not support the video tag.
- </video>
- </section>
- 
- <section>
- <h2 id="Explanation" style="color:red;"> How are The Three Linked?</h2>
- <p > <strong>THE TRINITY :</strong>Imagine a Triangle. The three points are our topics, but the magic happens on the lines connecting them.
- <dl>
- <dt style="color:purple" align="center"><b>The Foundation: GEOMETRY</b></dt>
- <dd>Geometry is not just shapes; it is the source code of the universe.
- Before a thing can exist, it must have a form. Geometry provides the rules (<TT>physics, dimensions, ratios</TT>)</dd>
- <ul>
- <li> <b>The Link to Art : </b>Art uses Geometry to create harmony (The Gol  world ie; 3D printers, Laser Cutters, CNC Machines.</li>
- </ul>
- </dl>
- <dl>
- <dt style="color:purple" align="center"><b>The Engine: Technology</b></dt>
- <dd>We, as humans, have limited precision. We shake, we get tired. Technology (code, machines) Executes Geometric rules with perfect precision, millions of times per second.</dd>
- <ul>
- <li> <b>The Link to Geometry: </b>Tech makes complex Geometry possible. You cannot draw a fractal by hand (it takes too long), but a computer can iterate the Geometry instantly.</li>
- <li> <b>The Link to Craft : </b>Tech moves digital ideas into the physical world <TT>3D Printers, Laser Cutters, CNC Machines.</TT></li>
- </ul>
- </dl>
- <dl>
- <dt style="color:purple" align="center"><b>The Output: ART & CRAFT</b></dt>
- <dd>Art is the human reaction to the order of Geometry.
- <TT>Concept</TT>: If it's just math, it's cold. If it's just Tech, it's robotic. "Craft" is where human intuition tweaks the parameters to make it feel something</dd>
- <ul>
- <li> <b>The Link to Tech : </b>"Generative Art" is when you tell the Tech to be random. You give the machine the brush, but you set the rules.</li>
- <li> <b>The Link to Geometry : </b>Craft is the physical manifestation of Geometric laws . <TT>weaving, origami, carpentry, joints.</TT></li>
- </ul>
- </dl>
- <img src="crafted_art.png" alt="Crafted Art" width="45%" height="40%" style="display:block; margin: 20px auto;" > 
-  <TT><I>The image shows a Complex, 3D ,Geometric structure printe with intricate details. It shows the fusion of abstract Geometry (mathematics), tangible Craft (fabrication), and Advanced Technology (3D Printing), RESULTING TO A PIECE THAT CAN BE SEEN AS ART</I></TT><BR>
- <hr>
- <h4>Read More on the Web:</h4>
- <ul>
- <li><a href="https://en.wikipedia.org/wiki/Generative_art" target="_blank" style="color: #00d4ff;">What is Generative Art?</a></li>
- <li><a href="https://www.goldennumber.net/" target="_blank" style="color: #00d4ff;">The Golden Ratio in Design</a></li>
- <li><a href="https://processing.org/" target="_blank" style="color: #00d4ff;">Coding for Visual Arts</a></li>
- </ul>
- </section> <BR>
-<hr> <BR>
-<p> <h3 align="center"> 
-Click Here  <button>  <a href="contact.html">Sign UP</a> </button>  To Sign Up To our Page</p>
- Give us your feedback, we will appreciate it!</h3> 
-</div>
- <script src="script.js"></script>
+
+    <nav>
+        <a href="index.html" class="nav-logo">MOSIMI NEXUS</a>
+        
+        <!-- Hamburger Menu Logic -->
+        <input type="checkbox" id="nav-check">
+        <label for="nav-check" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="#Explanation">Concept</a>
+            <a href="contact.html">Join Us</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1 align="center" class="highlight-green"><b>GEOMETRIC_TECH_ART-CRAFT</b></h1>
+            <h3 align="center">Where Code Weaves the Universe</h3>
+        </header>
+
+        <hr>
+
+        <section>
+            <h2>Is Coding the New Pottery, Art even?</h2>
+            <p>
+                Welcome to the Digital Loom, where we explore the hidden threads connecting the clay in a potter's hand to the pixels on your screen. 
+                Did you know that the same <strong class="highlight-blue">Geometry</strong> that defines a honeycomb and Art are used to render 3D video games?
+            </p>
+            <br>
+            <button><a href="contact.html">Sign UP?</a></button>
+
+            <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=800&q=80" alt="Generative art">
+            <p align="center"><tt><i>Craft meeting Digital creation through Technology and Geometry</i></tt></p>
+            
+            <p>
+                We look at <strong>Technology</strong> not just as a tool, but as a modern <strong class="highlight-red">Craft</strong>. 
+            </p>
+        </section>
+
+        <section>
+            <h3>Featured Insight: Fractals</h3>
+            <p>A look at how infinite patterns exist in nature and code.</p>
+            
+            <video controls poster="https://via.placeholder.com/800x450.png?text=Fractal+Video+Poster">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="Explanation">
+            <h2 class="highlight-red">How are The Three Linked?</h2>
+            <p><strong>THE TRINITY:</strong> Imagine a Triangle. The magic happens on the lines connecting Geometry, Tech, and Art.</p>
+            
+            <dl>
+                <dt class="highlight-blue">The Foundation: GEOMETRY</dt>
+                <dd>Geometry is the source code of the universe. Before a thing can exist, it must have a form.</dd>
+                
+                <dt class="highlight-red">The Engine: Technology</dt>
+                <dd>Tech executes Geometric rules with perfect precision, millions of times per second.</dd>
+                
+                <dt class="highlight-green">The Output: ART & CRAFT</dt>
+                <dd>Art is the human reaction to order. "Craft" is where human intuition tweaks the parameters.</dd>
+            </dl>
+            
+            <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?w=800&q=80" alt="3D Printed Art"> 
+            <p align="center"><tt><i>A fusion of abstract Geometry, tangible Craft, and Advanced Technology.</i></tt></p>
+        </section>
+
+        <hr>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <h3>Join our curious collective today!</h3>
+            <button><a href="contact.html">Sign UP Now</a></button>
+        </div>
+    </div>
+
+    <footer>
+        <p align="center" style="padding: 40px; color: #555; font-size: 0.8rem;">
+            &copy; 2023 Mosimi's Digital Nexus. The geometry is listening.
+        </p>
+    </footer>
+
+    <script>
+        // Closes the mobile hamburger menu automatically when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navCheck = document.getElementById('nav-check');
+                if (navCheck) navCheck.checked = false;
+            });
+        });
+    </script>
 </body>
-
 </html>
-
-
-
-
-
