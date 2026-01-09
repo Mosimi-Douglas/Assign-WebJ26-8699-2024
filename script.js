@@ -1,70 +1,51 @@
-**
- * script.js
- * Handles interactivity and navigation for Mosimi's Digital Nexus
- */
+/* script.js */
 
+// Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Navigation: Close mobile hamburger menu automatically when a link is clicked
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const navCheck = document.getElementById('nav-check');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navCheck) navCheck.checked = false;
-        });
-    });
-
-    // 2. Signup Form Handling
+    // 1. Handle the Signup Form
     const signupForm = document.getElementById('signupForm');
-    if (signupForm) {
-        signupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('emailInput').value;
-            showNexusNotification(`Success! ${email} added to the nexus.`);
+    if(signupForm) {
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            let email = document.getElementById('emailInput').value;
+            // Create a custom modal effect instead of simple alert
+            const feedbackBox = document.createElement('div');
+            feedbackBox.style.cssText = "position:fixed; top:20%; left:50%; transform:translate(-50%, -50%); background:#00d4ff; color:#000; padding:20px; border-radius:8px; z-index:2000; font-weight:bold; text-align:center; box-shadow: 0 0 20px rgba(0,0,0,0.5);";
+            feedbackBox.innerHTML = `SUCCESS: [${email}] SYNCED TO THE LOOM.`;
+            document.body.appendChild(feedbackBox);
+            
+            setTimeout(() => { feedbackBox.remove(); }, 3000);
             signupForm.reset();
         });
     }
 
-    // 3. Feedback Form Handling
+    // 2. Handle the Feedback Form
     const feedbackForm = document.getElementById('feedbackForm');
-    if (feedbackForm) {
-        feedbackForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('nameInput').value;
-            showNexusNotification(`Thank you, ${name}. Message received.`);
+    if(feedbackForm) {
+        feedbackForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let name = document.getElementById('nameInput').value;
+            
+            const feedbackBox = document.createElement('div');
+            feedbackBox.style.cssText = "position:fixed; top:20%; left:50%; transform:translate(-50%, -50%); background:#00ff00; color:#000; padding:20px; border-radius:8px; z-index:2000; font-weight:bold; text-align:center;";
+            feedbackBox.innerHTML = `MESSAGE RECEIVED, ${name.toUpperCase()}. WE APPRECIATE YOUR INSIGHT!`;
+            document.body.appendChild(feedbackBox);
+
+            setTimeout(() => { feedbackBox.remove(); }, 3000);
             feedbackForm.reset();
         });
     }
 
-    /**
-     * Helper function to show a custom tech-styled notification
-     */
-    function showNexusNotification(message) {
-        const toast = document.createElement('div');
-        
-        Object.assign(toast.style, {
-            position: 'fixed',
-            bottom: '30px',
-            right: '30px',
-            backgroundColor: '#00d4ff',
-            color: '#0a0a0a',
-            padding: '15px 25px',
-            borderRadius: '4px',
-            fontWeight: 'bold',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.5)',
-            zIndex: '9999',
-            fontFamily: 'Consolas, monospace',
-            borderLeft: '5px solid #ff4d4d'
-        });
+    // 3. Navigation Highlighting
+    const currentLocation = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        if(link.getAttribute('href') === currentLocation) {
+            link.style.color = '#00ff00';
+            link.style.borderBottom = '1px solid #00ff00';
+        }
+    });
 
-        toast.innerText = message;
-        document.body.appendChild(toast);
-
-        setTimeout(() => {
-            toast.style.opacity = '0';
-            toast.style.transition = 'opacity 0.5s ease';
-            setTimeout(() => toast.remove(), 500);
-        }, 4000);
-    }
+    console.log("Welcome to the code behind the curtain. The geometry is listening.");
 });
