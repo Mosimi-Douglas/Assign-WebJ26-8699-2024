@@ -1,4 +1,4 @@
-* style.css */
+/* style.css */
 /* 1. RESET */
 * {
     box-sizing: border-box;
@@ -169,6 +169,7 @@ dt { font-weight: bold; margin-top: 15px; }
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
 
 
 
