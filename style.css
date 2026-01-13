@@ -86,7 +86,7 @@ nav a:hover {
 } 
 /*Hamburger Logic */
 .menu-toggle {
-            
+            display : none;
             flex-direction: column;
             cursor: pointer;
             gap: 5px;
@@ -164,6 +164,7 @@ dt { font-weight: bold; margin-top: 15px; }
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
 
 
 
