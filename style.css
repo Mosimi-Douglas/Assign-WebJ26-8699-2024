@@ -50,7 +50,8 @@ nav a {
 nav a:hover {
     color: #00d4ff;
 }
-#nav-check { display : none;} 
+#nav-check { display : none;}
+#nav-check :checked ~ nav{display:block;} 
 /* Hamburger animation to X */
             #nav-check:checked ~ .menu-toggle span:nth-child(1) {
                 transform: translateY(8px) rotate(45deg);
@@ -137,6 +138,7 @@ dt { font-weight: bold; margin-top: 15px; }
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
 
 
 
