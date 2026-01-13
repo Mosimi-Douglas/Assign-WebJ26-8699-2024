@@ -1,4 +1,5 @@
 /* style.css */
+
 /* 1. RESET */
 * {
     box-sizing: border-box;
@@ -6,11 +7,11 @@
     padding: 0;
 }
 
-/* DARK MODE BASE */
+/* 2. DARK MODE BASE */
 body {
     background-color: #1a1a1a;
     color: #f0f0f0;
-    font-size: 18px; /* for better readability on long text */
+    font-size: 18px;
     font-family: 'Consolas', 'Courier New', monospace;
     line-height: 1.7;
     padding-bottom: 40px;
@@ -29,85 +30,108 @@ p { margin-bottom: 20px; }
 /* 3. NAVIGATION BAR */
 nav {
     background-color: #333;
-    display:flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
     padding: 15px 20px;
     align-items: center;
     border-bottom: 3px solid #0a0a0a;
     position: sticky;
-    top: 60;
+    top: 0;
     z-index: 1000;
 }
+
 .nav-logo {
-            font-weight: bold;
-            color: #00d4ff;
-            text-decoration: none;
-            font-size: 1.2rem;
+    font-weight: bold;
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
-.nav-links {display:flex;} 
-.menu-label { color: red; margin-right: 15px; }
-nav a {
+
+/* Desktop Links */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
     font-size: 0.9em;
     font-weight: bold;
     transition: color 0.3s;
 }
+
 nav a:hover {
     color: #00d4ff;
 }
-.nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #0a0a0a;
-                flex-direction: column;
-                align-items: center;
-                max-height: 0 ;
-                overflow: hidden;
-                transition: max-height 0.3s ease-in-out;
-                border-bottom: 2px solid #00d4ff;
-    }
-#nav-check { display : none;}
-  #nav-check:checked ~ .nav-links {
-                max-height: 300px;
-  } 
-/* Hamburger animation to X */
-            #nav-check:checked ~ .menu-toggle span:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-            #nav-check:checked ~ .menu-toggle span:nth-child(2) {
-                opacity: 0;
-            }
-            #nav-check:checked ~ .menu-toggle span:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-} 
-/*Hamburger Logic */
+
+/* Hide Hamburger and Checkbox on Desktop */
+#nav-check {
+    display: none;
+}
+
 .menu-toggle {
-            display : none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-    }
-.menu-toggle span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            border-radius: 3px;
-            transition: 0.3s;} 
-/* Mobile Styles */
-/* Mobile Styles */
-        @media (max-width: 768px) {
-            .menu-toggle {
+    display: none;
+}
+
+/* --- MOBILE NAVIGATION LOGIC --- */
+@media (max-width: 768px) {
+    .menu-toggle {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-        gap: 5px;} 
-            }
-            
+        gap: 5px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0a0a0a;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0; /* Hidden by default */
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        border-bottom: 2px solid #00d4ff;
+    }
+
+    /* Stack links vertically on mobile */
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        border-bottom: 1px solid #222;
+    }
+
+    /* When Checkbox is checked, show menu */
+    #nav-check:checked ~ .nav-links {
+        max-height: 450px; /* Adjusted for your 7 links */
+    }
+
+    /* Hamburger Animation to X */
+    #nav-check:checked ~ .menu-toggle span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #nav-check:checked ~ .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-check:checked ~ .menu-toggle span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
 /* 4. LAYOUT CONTAINERS */
 .container {
     max-width: 1000px;
@@ -115,16 +139,7 @@ nav a:hover {
     padding: 20px;
 }
 
-.deep-dive {
-    background: #252525;
-    padding: 30px;
-    border-left: 4px solid #00d4ff;
-    border-radius: 0 8px 8px 0;
-    margin: 30px 0;
-    text-align: justify;
-}
-
-/* 5. MEDIA */
+/* 5. MEDIA & IMAGES */
 .mimi, video, iframe {
     max-width: 100%;
     height: auto;
@@ -134,7 +149,7 @@ nav a:hover {
     border-radius: 10px;
 }
 
-/* 6. FORMS */
+/* 6. FORMS & BUTTONS */
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -144,6 +159,7 @@ input, textarea {
     color: #fff;
     font-family: inherit;
 }
+
 button {
     background-color: #00d4ff;
     color: #000;
@@ -154,6 +170,7 @@ button {
     text-transform: uppercase;
     transition: all 0.2s;
 }
+
 button:hover {
     background-color: #fff;
     transform: scale(1.05);
@@ -163,28 +180,10 @@ button:hover {
 ul, dl { margin-left: 20px; margin-bottom: 20px; }
 dt { font-weight: bold; margin-top: 15px; }
 
-/* MOBILE ADJUSTMENTS */
+/* General Mobile Adjustments */
 @media (max-width: 768px) {
-    body { font-size: 16px;} 
+    body { font-size: 16px; }
     .container { padding: 15px; }
-    .deep-dive { padding: 15px; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
