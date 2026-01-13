@@ -31,7 +31,8 @@ nav {
     background-color: #333;
     display:flex;
     justify-content:space-between;
-    padding: 15px;
+    padding: 15px 20px;
+    align-items: center;
     border-bottom: 3px solid #0a0a0a;
     position: sticky;
     top: 0;
@@ -154,11 +155,11 @@ dt { font-weight: bold; margin-top: 15px; }
 
 /* MOBILE ADJUSTMENTS */
 @media (max-width: 768px) {
-    body { font-size: 16px; }
-    nav a { display: block; margin: 5px 0; }
+    body { font-size: 16px;} 
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
 
 
 
