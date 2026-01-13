@@ -44,6 +44,7 @@ nav {
             text-decoration: none;
             font-size: 1.2rem;
 }
+.nav-links {display:flex;} 
 .menu-label { color: red; margin-right: 15px; }
 nav a {
     color: #fff;
@@ -159,6 +160,7 @@ dt { font-weight: bold; margin-top: 15px; }
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
 
 
 
