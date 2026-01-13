@@ -62,7 +62,7 @@ nav a:hover {
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: #00d4ff;
+                background-color: #0a0a0a;
                 flex-direction: column;
                 align-items: center;
                 max-height: ;
@@ -164,6 +164,7 @@ dt { font-weight: bold; margin-top: 15px; }
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
 
 
 
