@@ -35,7 +35,7 @@ nav {
     align-items: center;
     border-bottom: 3px solid #0a0a0a;
     position: sticky;
-    top: 0;
+    top: 60;
     z-index: 1000;
 }
 .nav-logo {
@@ -65,7 +65,7 @@ nav a:hover {
                 background-color: #0a0a0a;
                 flex-direction: column;
                 align-items: center;
-                max-height: ;
+                max-height: 0 ;
                 overflow: hidden;
                 transition: max-height 0.3s ease-in-out;
                 border-bottom: 2px solid #00d4ff;
@@ -164,6 +164,7 @@ dt { font-weight: bold; margin-top: 15px; }
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
 
 
 
