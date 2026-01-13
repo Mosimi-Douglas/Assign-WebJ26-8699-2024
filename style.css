@@ -99,10 +99,15 @@ nav a:hover {
             border-radius: 3px;
             transition: 0.3s;} 
 /* Mobile Styles */
+/* Mobile Styles */
         @media (max-width: 768px) {
             .menu-toggle {
-                display: flex;} 
-        } 
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;} 
+            }
+            
 /* 4. LAYOUT CONTAINERS */
 .container {
     max-width: 1000px;
@@ -164,6 +169,7 @@ dt { font-weight: bold; margin-top: 15px; }
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
 
 
 
