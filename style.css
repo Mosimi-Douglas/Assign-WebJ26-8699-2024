@@ -10,7 +10,7 @@
 body {
     background-color: #1a1a1a;
     color: #f0f0f0;
-    font-size: 18px; /* Slightly reduced from 22px for better readability on long text */
+    font-size: 18px; /* for better readability on long text */
     font-family: 'Consolas', 'Courier New', monospace;
     line-height: 1.7;
     padding-bottom: 40px;
@@ -48,7 +48,8 @@ nav a {
 nav a:hover {
     color: #00d4ff;
 }
-
+#nav-check { display : none} 
+#menu-toggle:checked ~ nav{display : block} 
 /* 4. LAYOUT CONTAINERS */
 .container {
     max-width: 1000px;
@@ -111,3 +112,4 @@ dt { font-weight: bold; margin-top: 15px; }
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
