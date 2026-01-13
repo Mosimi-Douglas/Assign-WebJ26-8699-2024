@@ -29,6 +29,8 @@ p { margin-bottom: 20px; }
 /* 3. NAVIGATION BAR */
 nav {
     background-color: #333;
+    display:flex;
+    justify-content:space-between;
     padding: 15px;
     text-align: center;
     border-bottom: 3px solid #00d4ff;
@@ -112,5 +114,6 @@ dt { font-weight: bold; margin-top: 15px; }
     .container { padding: 15px; }
     .deep-dive { padding: 15px; }
 }
+
 
 
